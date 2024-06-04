@@ -1,33 +1,32 @@
 {
-    "manifest_version": 2,
-    "name": "PR Translator",
-    "version": "1.0",
-    "description": "Translate websites laanguage",
-    "permissions": [
-      "activeTab",
-      "tabs",
-      "storage",
-      "contextMenus",
-      "file:///*"
-    ],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": true
-    },
-    "browser_action": {
-      
-      "default_popup": "popup.html"
-    },
-    "content_scripts": [
-      {
-        "matches": [
-          "<all_urls>"
-        ],
-        "js": [
-          "common.js",
-          "extractor.js",
-          "content.js"
-        ]
-      }
-    ]
-  }
+  "manifest_version": 2,
+  "name": "PR Translator",
+  "version": "1.0",
+  "description": "Translate websites language",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "contextMenus",
+    "file:///*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "common.js",
+        "extractor.js",
+        "content.js"
+      ]
+    }
+  ]
+}  
