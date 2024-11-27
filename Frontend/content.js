@@ -25,7 +25,7 @@ function scantexts() {
 }
 
 async function makecall(postdata, ele) {
-  const response = await fetch('https://libretranslate-hxth.onrender.com/translate', {
+  const response = await fetch('http://127.0.0.1:5000/translate', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ async function makecall(postdata, ele) {
 
 
 function sendImageToApi(imageUrl) {
-  const apiUrl = "https://pr-translator-backend.onrender.com/translate/image/";
+  const apiUrl = "http://127.0.0.1:8000/translate/image/";
 
   fetch(apiUrl, {
     method: "POST",
@@ -109,7 +109,7 @@ function scanfiles() {
             body: form
           };
       
-          fetch('https://libretranslate-hxth.onrender.com/translate_file', options)
+          fetch('http://127.0.0.1:5000/translate_file', options)
             .then(response => response.json())
             .then(response => console.log(response))
             .catch(err => console.error(err));
@@ -142,7 +142,7 @@ extensionAPI.runtime.onMessage.addListener(function (request, sender, sendRespon
     alert("Re translated again")
   }
   if (request.action === "playText") {
-    const apiUrl = "https://pr-translator-backend.onrender.com/translate/audio/";
+    const apiUrl = "http://127.0.0.1:8000/translate/audio/";
 
     fetch(apiUrl, {
       method: "POST",
@@ -172,7 +172,7 @@ function revert() {
 }
 
 function reportText(selectedText) {
-  const apiUrl = "https://pr-translator-backend.onrender.com/translate/summarize/";
+  const apiUrl = "http://127.0.0.1:8000/translate/summarize/";
 
   fetch(apiUrl, {
     method: "POST",

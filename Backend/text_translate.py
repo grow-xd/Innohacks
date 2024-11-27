@@ -83,7 +83,7 @@ def gtxt_translate(text,lang):
 
 def new_translator(text):
     print(text)
-    url = 'http://127.0.0.1:5000/translate'
+    url = 'https://lucid-recursing-hoover-2.cidemo.co/translate'
     data = {
         'q': text,
 		'source': "en",
@@ -127,7 +127,7 @@ def ppttransform(url):
 
 
     files = {'file': open(file_name, 'rb')}
-    url = 'http://127.0.0.1:5000/translate_file'
+    url = 'https://lucid-recursing-hoover-2.cidemo.co/translate_file'
     data = {
         'api_key': "",
         'source': "en",
